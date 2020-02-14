@@ -22,7 +22,7 @@ pipelines:
         jobs:
           build_image:
             timeout: 0
-            elastic_profile_id: demo-app1
+            elastic_profile_id: demo-app2
             artifacts:
             - external:
                 id: bulletin-board
