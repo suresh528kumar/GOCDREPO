@@ -22,14 +22,14 @@ pipelines:
         jobs:
           build_image:
             timeout: 0
-            elastic_profile_id: demo-app2
+            elastic_profile_id: demo-app
             artifacts:
             - external:
                 id: bulletin-board
                 store_id: dockerhub
                 configuration:
                   options:
-                    Image: $DOCKERHUB_USERNAME/bulletin-board
+                    Image: ${DOCKERHUB_USERNAME}/bulletin-board
                     Tag: ${GO_PIPELINE_LABEL}
             tasks:
             - exec:
