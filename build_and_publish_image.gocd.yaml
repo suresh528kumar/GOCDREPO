@@ -35,6 +35,7 @@ pipelines:
             - exec:
                 arguments:
                 - -c
+                - echo "hello world"
                 - docker build -t $DOCKERHUB_USERNAME/bulletin-board:v1 . -f Dockerfile.application
                 command: /bin/bash
                 run_if: passed
