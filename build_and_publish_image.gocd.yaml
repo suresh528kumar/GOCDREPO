@@ -35,6 +35,6 @@ pipelines:
             - exec:
                 arguments:
                 - -c
-                - echo #{DOCKERHUB_USERNAME}$
+                - echo #{DOCKERHUB_USERNAME}
                 command: /bin/bash
                 run_if: passed
