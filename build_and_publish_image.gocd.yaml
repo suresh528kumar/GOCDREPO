@@ -29,12 +29,12 @@ pipelines:
                 store_id: dockerhub
                 configuration:
                   options:
-                    Image: $DOCKERHUB_USERNAME/bulletin-board
+                    Image: suresh528kumar/bulletin-board
                     Tag: v1
             tasks:
             - exec:
                 arguments:
                 - -c
-                - docker build -t $DOCKERHUB_USERNAME/bulletin-board:v1 . -f Dockerfile.application
+                - docker build -t suresh528kumar/bulletin-board:v1 . -f Dockerfile.application
                 command: /bin/bash
                 run_if: passed
