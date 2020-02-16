@@ -43,4 +43,4 @@ pipelines:
                 arguments:
                 - "-c\r"
                 - echo $DOCKERHUB_USERNAME
-                command: /bin/bash
+                command: sh
