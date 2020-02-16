@@ -6,6 +6,7 @@ pipelines:
     lock_behavior: unlockWhenFinished
     display_order: 2
     environment_variables:
+      DOCKERHUB_USERNAMEEX: suresh528kumar
     materials:
       upstream:
         pipeline: build_and_publish_image
@@ -21,7 +22,7 @@ pipelines:
         jobs:
           test_app_image:
             timeout: 0
-            elastic_profile_id: demo-app
+            elastic_profile_id: demo-app1
             tasks:
             - fetch:
                 artifact_id: bulletin-board
@@ -33,6 +34,6 @@ pipelines:
             - exec:
                 arguments:
                 - -c
-                - docker run $DOCKERHUB_USERNAME/bulletin-board:$GO_DEPENDENCY_LABEL_UPSTREAM npm test
+                - docker run $DOCKERHUB_USERNAMEEX/bulletin-board:$GO_DEPENDENCY_LABEL_UPSTREAM npm test
                 command: /bin/bash
                 run_if: passed
