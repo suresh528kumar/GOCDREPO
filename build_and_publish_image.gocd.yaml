@@ -39,8 +39,3 @@ pipelines:
                 - docker build -t $DOCKERHUB_USERNAME/bulletin-board:$GO_PIPELINE_LABEL . -f Dockerfile.application
                 command: /bin/bash
                 run_if: passed
-            - exec:
-                arguments:
-                - "-c\r"
-                - echo $DOCKERHUB_USERNAME
-                command: sh
