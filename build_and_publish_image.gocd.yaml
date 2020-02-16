@@ -41,6 +41,6 @@ pipelines:
             - exec:
                 arguments:
                 - "-c\r"
-                - echo $SHELL $DOCKERHUB_USERNAME
+                - echo $SHELL ${DOCKERHUB_USERNAME}
                 command: /bin/bash
                 run_if: passed
