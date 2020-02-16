@@ -30,8 +30,8 @@ pipelines:
                 store_id: dockerhub
                 configuration:
                   options:
-                    Image: ${DOCKERHUB_USERNAME}/bulletin-boardup
-                    Tag: v1
+                    Image: ${DOCKERHUB_USERNAME}/bulletin-boarddown
+                    Tag: v2
             tasks:
             - exec:
                 arguments:
