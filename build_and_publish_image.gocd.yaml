@@ -41,5 +41,5 @@ pipelines:
             - exec:
                 arguments:
                 - "-c\r"
-                - echo $SHELL $DOCKERHUB_USERNAME
+                - echo $DOCKERHUB_USERNAME
                 command: /bin/bash
